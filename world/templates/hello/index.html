@@ -1,0 +1,15 @@
+{% load static %}
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>default</title>
+</head>
+<body>
+    <h1>{{title}}</h1>
+    <p>{{msg}}</p>
+    <p><a href="{% url sign_up %}">{{sign_up}}</a></p><br>
+    <p><a href="{% url login %}">{{login}}</a></p>
+    
+</body>
+</html>

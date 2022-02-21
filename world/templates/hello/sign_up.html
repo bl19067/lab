@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>	
+<html lang="ja">
+	<head>
+		<title>{{title}}</title>
+		<link rel="stylesheet" type="text/css" href="{% static 'hello/css/style.css' %}"/>
+	</head>
+	<body>
+		<h1>{{title}}</h1>
+		<p>{{msg}}</p>
+		<form action="{%url 'form' %}" method="post">
+			{% csrf_token %}
+			<label for="msg">user_name:</label>
+			<input id="msg" type="text" name="msg"><br>
+		
+			<label for="msg">user_email:</label>
+			<input id="email" type="email" ><br>
+			
+			<label for="pass">Password:</label>
+			<input type="password" id="pass" name="password" minlength="4" required><br>
+		
+			<label for="pass">Confirm</label>
+			<input type="password" id="pass" name="password" minlength="4" required><br>
+			<input type="submit">
+	
+
+		</form>
+		
+
+	</body>
+</html>
